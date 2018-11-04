@@ -19,7 +19,7 @@ onChange = (e, key,type="single") => {
     console.log(`${key} changed ${e.target.value} type ${type}`);
     if (type === "single") {
         this.setState({
-            [key]: e.target.value  
+           [key]: e.target.value  
         });
     } else {
         // Array of values (e.g. checkbox): TODO: Optimization needed.
@@ -42,9 +42,8 @@ onChange = (e, key,type="single") => {
 }
    renderForm = () => {
     let model = this.props.config;
-    
     let formUI = model.items.map((m,ikey) => {
-        let key = ikey;
+        let key = m.name;
         let type = m.type || "text";
         let props = m.props || {};
         let name= m.name;
@@ -54,7 +53,7 @@ onChange = (e, key,type="single") => {
         value = this.state[target];
 
         let input =  <input {...props}
-                ref={(key)=>this[m.name]=key}
+                // ref={(key)=>this[m.name]=key}
                 className="form-input"
                 type={type}
                 key={key}
