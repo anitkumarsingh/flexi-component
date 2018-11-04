@@ -67,6 +67,7 @@ onChange = (e, key,type="single") => {
             input = m.options.map((o) => {
                 let checked = o.value === value;
                 console.log("select: ", o.value, value);
+                console.log(m.name);
                  return (
                         <option {...props}
                             className="form-input"
@@ -77,7 +78,7 @@ onChange = (e, key,type="single") => {
             });
 
             console.log("Select default: ", value);
-            input = <select value={value} onChange={(e)=>{this.onChange(e, m.key)}}>{input}</select>;
+            input = <select value={value} onChange={(e)=>{this.onChange(e, m.name)}}>{input}</select>;
          }
 
         return (

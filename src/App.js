@@ -8,7 +8,7 @@ class App extends Component {
     super();
     this.state = {
       datas: [
-        {id: 1, Person_name:"Anit",state:"Karnataka"}
+        {id: 1, person_name:"Anit",state:"Karnataka"}
       ]
     }
   }
