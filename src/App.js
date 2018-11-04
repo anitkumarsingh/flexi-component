@@ -8,7 +8,7 @@ class App extends Component {
     super();
     this.state = {
       datas: [
-        {id: 1, person_name:"Anit",state:"Karnataka"}
+        {person_name:"Anit",state:"Karnataka"}
       ]
     }
   }
@@ -23,10 +23,25 @@ class App extends Component {
   }
   render() {
   //  console.log(Data);
+  let data = this.state.datas.map((d) => {
+    return (
+      <tr key={d.id}>
+          <td>{d.person_name}</td>
+          <td>{d.state}</td>
+          <td>{JSON.stringify(this.state.datas)}</td>
+      </tr>
+    );
+  });
     return (
       <div className="App">
        <Flexi onSubmit={(Data)=>this.onFlexiSubmit(Data)} title="Dynamic Form" config={Data}/>
-       {JSON.stringify(this.state.datas)}
+       <table id="customers">
+          <th>Person's Name</th>
+          <th>Person's State</th>
+          <th>JSON Format</th>
+          
+          <tbody>{data}</tbody>
+        </table>
       </div>
     );
   }

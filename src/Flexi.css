@@ -1,5 +1,6 @@
 .dynamic-form {
-    box-shadow: 2px 6px 8px grey;
+    box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.1);
+   transition: 0.2s box-shadow ease-in-out, 0.2s background-color ease-in-out, 0.2s border-color ease-in-out;
     margin-bottom: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -25,7 +26,8 @@
 
 .dynamic-form select{
     margin-top: 5px;
-    line-height: 1.5em;
+    line-height: 2.5em;
+    height: 30px;
 }
 
 .dynamic-form .form-group button{
@@ -51,7 +53,6 @@
 }
 .form-actions button {
     width: 80px;
-
     line-height: 1.5em;
     background-color: #3498DB;
     color: white;
