@@ -3,16 +3,17 @@ const flexiConfig = {
         {
             "name":"person_name",
             "label":"Person's Name",
-            "type":"TextField"
+            "type":"text"
         },
         {
           "name":"state",
           "label":"Person's state",
-          "type":"DropDown",
-          "value":[
-              "Maharashtra",
-              "Kerala",
-              "Tamil Nadu"
+          "type":"select",
+          "value":"select city",
+          "options":[
+             { value: "Maharashtra" },
+              { value:"Kerala" },
+             { value:"Tamil Nadu" }
           ]
         }
     ]
