@@ -30,7 +30,7 @@
     transform: rotate(360deg);
   }
 }
-#customers {
+#person-table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
@@ -38,16 +38,16 @@
   bottom: 15%;
 }
 
-#customers td, #customers th {
+#person-table td, #person-table th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#person-table tr:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+#person-table tr:hover {background-color: #ddd;}
 
-#customers th {
+#person-table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;

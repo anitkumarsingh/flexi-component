@@ -37,7 +37,7 @@ class App extends Component {
             onSubmit={(Data)=>this.onFlexiSubmit(Data)} 
             title="Dynamic Form" config={Data}
        />
-       <table id="customers">
+       <table id="person-table">
         <tr>
             <th>Person's Name</th>
             <th>Person's State</th>
