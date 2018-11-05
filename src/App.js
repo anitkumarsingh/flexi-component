@@ -13,11 +13,10 @@ class App extends Component {
     }
   }
   onFlexiSubmit = (Data) =>{
-    let id = +new Date();
-    console.log(this.state.datas);
+    // console.log(this.state.datas);
     // alert(JSON.stringify(Data));
     this.setState({
-      datas:[id+Data,...this.state.datas] 
+      datas:[Data,...this.state.datas] 
       // appending data reveived from child component with parent state's data
     })
   }
