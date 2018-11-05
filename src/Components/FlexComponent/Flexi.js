@@ -11,8 +11,9 @@ class Flexi extends Component{
    }
 
 onSubmit = (e) => {
-    e.preventDefault();
-    if (this.props.onSubmit) this.props.onSubmit(this.state);
+    e.preventDefault();  // Preventing full refreshing of page when submit button click
+    if (this.props.onSubmit) this.props.onSubmit(this.state); 
+    // communicating with parent component, sending Data store in state to parent component
 }
 
 onChange = (e, key,type="single") => {
@@ -20,32 +21,16 @@ onChange = (e, key,type="single") => {
     if (type === "single") {
         this.setState({
            [key]: e.target.value  
+           // Dynamicall creating key:value property and storing into the state
         });
-    } else {
-        // Array of values (e.g. checkbox): TODO: Optimization needed.
-        let found = this.state[key] ?  
-                        this.state[key].find ((d) => d === e.target.value) : false;
-        
-        if (found) {
-            let data = this.state[key].filter((d) => {
-                return d !== found;
-            });
-            this.setState({
-                [key]: data
-            });
-        } else {
-            this.setState({
-                [key]: [e.target.value, ...this.state[key]]
-            });
-        }
     }
 }
-   renderForm = () => {
+   creatingFormElements = () => {
     let model = this.props.config;
     let formUI = model.items.map((m,ikey) => {
         let key = m.name;
-        let type = m.type || "text";
-        let props = m.props || {};
+        let type = m.type || "text"; // if type is not provided default is text
+        let props = m.props || {}; // if props(required field) is mentioned then it will display or else props will be empty
         let name= m.name;
         let value = m.value;
 
@@ -65,7 +50,7 @@ onChange = (e, key,type="single") => {
 
         if (type === "select") {
             input = m.options.map((o) => {
-                let checked = o.value === value;
+                // let checked = o.value === value;
                 console.log("select: ", o.value, value);
                 console.log(m.name);
                  return (
@@ -94,21 +79,12 @@ onChange = (e, key,type="single") => {
     });
     return formUI;
 }
-    render(){
-    //     const elem = this.props.config;
-    //     const freshItem = this.props.config.items.map((itemssss,i)=>{
-    //         return(
-    //             <div key={i}>
-    //                <input type={itemssss.type}/>
-    //             </div>
-    //         );
-    //     })
-    //    console.log(elem);
-    
+    render(){ 
         return(
             <div className={this.props.className}>
+            <h3>{this.props.title}</h3>
             <form className="dynamic-form" onSubmit={(e)=>{this.onSubmit(e)}}>
-                {this.renderForm()}
+                {this.creatingFormElements()}
                 <div className="form-actions">
                     <button type="submit">submit</button>
                 </div>

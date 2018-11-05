@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Data from './data';
-import Flexi  from './Flexi';
+import Flexi  from './Components/FlexComponent/Flexi';
 
 class App extends Component {
   constructor(){
@@ -16,13 +16,12 @@ class App extends Component {
     let id = +new Date();
     // console.log(this.state.datas);
     alert(JSON.stringify(Data));
-     let datas2 = JSON.stringify(Data);
     this.setState({
-      datas:[Data,...this.state.datas]
+      datas:[Data,...this.state.datas] 
+      // appending data reveived from child component with parent state's data
     })
   }
   render() {
-  //  console.log(Data);
   let data = this.state.datas.map((d) => {
     return (
       <tr key={d.id}>
@@ -34,12 +33,14 @@ class App extends Component {
   });
     return (
       <div className="App">
-       <Flexi onSubmit={(Data)=>this.onFlexiSubmit(Data)} title="Dynamic Form" config={Data}/>
+       <Flexi 
+            onSubmit={(Data)=>this.onFlexiSubmit(Data)} 
+            title="Dynamic Form" config={Data}
+       />
        <table id="customers">
           <th>Person's Name</th>
           <th>Person's State</th>
           <th>JSON Format</th>
-          
           <tbody>{data}</tbody>
         </table>
       </div>
