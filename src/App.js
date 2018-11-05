@@ -15,16 +15,16 @@ class App extends Component {
   onFlexiSubmit = (Data) =>{
     let id = +new Date();
     // console.log(this.state.datas);
-    alert(JSON.stringify(Data));
+    // alert(JSON.stringify(Data));
     this.setState({
       datas:[Data,...this.state.datas] 
       // appending data reveived from child component with parent state's data
     })
   }
   render() {
-  let data = this.state.datas.map((d) => {
+  let data = this.state.datas.map((d,id) => {
     return (
-      <tr key={d.id}>
+      <tr key={id}>
           <td>{d.person_name}</td>
           <td>{d.state}</td>
           <td>{JSON.stringify(this.state.datas)}</td>
