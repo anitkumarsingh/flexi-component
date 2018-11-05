@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Data from './data';
+import Data from './DataSource/data';
 import Flexi  from './Components/FlexComponent/Flexi';
 
 class App extends Component {
