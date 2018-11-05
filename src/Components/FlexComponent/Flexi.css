@@ -12,6 +12,7 @@
     border-radius: 5px;
     position: relative;
     top: 30px;
+    background: rgba(0, 0, 0, 0.4);
 }
 .dynamic-form .form-group {
     padding: .5em;
@@ -23,7 +24,7 @@
 
 .dynamic-form .form-label {
     text-align: left;
-    color: #2E86C1;
+    color: white;
 }
 .dynamic-form .form-input{
     margin-top: 5px;
@@ -78,4 +79,7 @@
 .form-title{
     color:#bdc2ca;
     text-align: center;
+}
+.Developer{
+    color: white;
 }

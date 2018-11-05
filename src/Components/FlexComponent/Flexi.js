@@ -89,7 +89,7 @@ onChange = (e, key,type="single") => {
                 <div className="form-actions">
                     <button className="submitBtn" type="submit">Submit</button>
                 </div>
-                <p>Build By Anit Kumar, &copy; 2018</p>
+                <p className="Developer">Build By Anit Kumar, &copy; 2018</p>
             </form>
         </div>
         );

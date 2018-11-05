@@ -36,16 +36,18 @@
   width: 100%;
   position: absolute;
   bottom: 15%;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 #person-table td, #person-table th {
   border: 1px solid #ddd;
   padding: 8px;
+  color: white;
 }
 
-#person-table tr:nth-child(even){background-color: #f2f2f2;}
+#person-table tr:nth-child(even){background-color: rgba(0, 0, 0, 0.4);}
 
-#person-table tr:hover {background-color: #ddd;}
+/* #person-table tr:hover {background-color: #ddd;} */
 
 #person-table th {
   padding-top: 12px;

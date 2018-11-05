@@ -6,9 +6,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
-  background: url('https://cdn.pixabay.com/photo/2017/03/27/14/49/beach-2179183_960_720.jpg')no-repeat;
+  background: url('https://cdn.pixabay.com/photo/2017/09/04/16/14/water-2714577_960_720.jpg')no-repeat;
   background-size: cover;
   background-position: center center;
+  padding-bottom: 0;
 }
 
 code {
