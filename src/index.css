@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
-  background: url('https://cdn.pixabay.com/photo/2017/09/04/16/14/water-2714577_960_720.jpg')no-repeat;
+  background:linear-gradient(90deg,rgba(189, 25, 210, 0.7),rgba(33,150,243,.8)), url('https://cdn.pixabay.com/photo/2017/09/04/16/14/water-2714577_960_720.jpg')no-repeat;
   background-size: cover;
   background-position: center center;
   padding-bottom: 0;
