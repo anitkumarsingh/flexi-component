@@ -38,9 +38,11 @@ class App extends Component {
             title="Dynamic Form" config={Data}
        />
        <table id="customers">
-          <th>Person's Name</th>
-          <th>Person's State</th>
-          <th>JSON Format</th>
+        <tr>
+            <th>Person's Name</th>
+            <th>Person's State</th>
+            <th>JSON Format</th>
+        </tr>
           <tbody>{data}</tbody>
         </table>
       </div>
