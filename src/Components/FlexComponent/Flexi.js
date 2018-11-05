@@ -49,14 +49,14 @@ onChange = (e, key,type="single") => {
 
 
         if (type === "select") {
-            input = m.options.map((o) => {
+            input = m.options.map((o,opkey) => {
                 // let checked = o.value === value;
                 console.log("select: ", o.value, value);
                 console.log(m.name);
                  return (
                         <option {...props}
                             className="form-input"
-                            key={o.key}
+                            key={opkey}
                             value={o.value}
                         >{o.value}</option>
                  );
