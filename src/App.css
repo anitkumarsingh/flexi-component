@@ -34,6 +34,8 @@
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  position: absolute;
+  bottom: 15%;
 }
 
 #customers td, #customers th {

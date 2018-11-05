@@ -2,14 +2,16 @@
     box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.1);
     transition: 0.2s box-shadow ease-in-out, 0.2s background-color ease-in-out, 0.2s border-color ease-in-out;
     margin-bottom: 5px;
-    padding: 15px 30px;
+    padding: 25px 30px;
     margin: 10px 2px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     border-top: 5px solid dodgerblue;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #e6e6e6;
     border-radius: 5px;
+    position: relative;
+    top: 30px;
 }
 .dynamic-form .form-group {
     padding: .5em;
@@ -48,15 +50,11 @@
     flex-direction: row;
 }
 
-.form-title {
-    text-align: left;
-}
-
 .form-actions {
     display: flex;
 }
 .form-actions button {
-    width: 80px;
+    width: 98%;
     line-height: 1.5em;
     background-color: dodgerblue;
     padding: 10px 0 10px 0;
@@ -66,4 +64,18 @@
     margin-top: 15px;
     margin-left: 5px;
     margin-bottom:5px;
+}
+.submitBtn{
+    position: relative;
+    top:60%;
+    /* left: 75%; */
+    background:url('../../img_183020.png')no-repeat;
+    background-position: 57%;
+    background-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.form-title{
+    color:#bdc2ca;
+    text-align: center;
 }

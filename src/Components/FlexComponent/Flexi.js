@@ -82,12 +82,14 @@ onChange = (e, key,type="single") => {
     render(){ 
         return(
             <div className={this.props.className}>
-            <h3>{this.props.title}</h3>
+            
             <form className="dynamic-form" onSubmit={(e)=>{this.onSubmit(e)}}>
+                <h3 className="form-title">{this.props.title}</h3>
                 {this.creatingFormElements()}
                 <div className="form-actions">
-                    <button type="submit">submit</button>
+                    <button className="submitBtn" type="submit">Submit</button>
                 </div>
+                <p>Build By Anit Kumar, &copy; 2018</p>
             </form>
         </div>
         );
