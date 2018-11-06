@@ -16,7 +16,7 @@ class App extends Component {
     // console.log(this.state.datas);
     // alert(JSON.stringify(Data));
     this.setState({
-      datas:[Data,...this.state.datas] 
+      datas:[...this.state.datas, Data] 
       // appending data reveived from child component with parent state's data
     })
   }

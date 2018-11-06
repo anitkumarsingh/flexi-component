@@ -35,12 +35,13 @@
   border-collapse: collapse;
   width: 100%;
   position: absolute;
-  bottom: 15%;
+  /* bottom: 15%; */
+  top:70%;
   background: rgba(0, 0, 0, 0.4);
 }
 
 #person-table td, #person-table th {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   padding: 8px;
   color: white;
 }
@@ -57,4 +58,8 @@
   color: white;
   font-size: 20px;
   font-weight: 900;
+}
+#person-table tbody{
+  height: 350px;
+  overflow: auto;
 }
