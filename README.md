@@ -3,6 +3,8 @@
 ### What is this?
 A simple react application which creates HTML elements based on JSON file and also allow user to enter particular details which then converted into JSON. Later it will render what user has entered as a JSON and in table format.
 
+##### [Live Demo](https://flexi-component.firebaseapp.com/)
+
 ###### Screenshot
 ![](src/Screenshots/flexiScreen.jpg)
 
